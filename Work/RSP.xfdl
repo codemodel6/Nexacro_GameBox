@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="RSP" left="0" top="0" width="1024" height="836" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Div id="Div00" taborder="0" text="Div00" left="2.54%" top="520" right="39.06%" height="167" style="background:lavenderblush;">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="✌" left="17.04%" top="33" right="67.76%" height="110" style="background:lightcyan;color:navy;font:bold 60 Dotum;cursor:pointer;" onclick="Div00_Button00_onclick"/>
+              <Button id="Button01" taborder="1" left="42.51%" top="33" right="42.3%" height="110" style="background:lightcyan;color:navy;align:center middle;font:bold 60 Dotum;cursor:pointer;" text="✊" onclick="Div00_Button01_onclick"/>
+              <Button id="Button02" taborder="2" text="✋" left="67.97%" top="33" right="16.84%" height="110" style="background:lightcyan;color:navy;align:center middle;font:bold 60 Dotum;cursor:pointer;" onclick="Div00_Button02_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="aiRSP" taborder="1" text="?" left="22.27%" top="16" right="59.28%" height="170" style="background:red;color:white;align:center middle;font:bold 80 Dotum;" onclick="Static00_onclick"/>
+        <Static id="myRSP" taborder="2" text="?" left="22.27%" top="331" right="59.28%" height="170" style="background:limegreen;color:white;align:center middle;font:bold 80 Dotum;" onclick="Static01_onclick"/>
+        <Static id="Static02" taborder="3" text="VS" left="23.44%" top="192" right="60.06%" height="133" style="background:transparent;color:yellow;align:center middle;font:bold 48 Dotum;"/>
+        <Static id="myScore" taborder="5" text="0" left="64.45%" top="29" right="25.39%" height="102" style="background:limegreen;color:white;align:center middle;font:bold 48 Dotum;"/>
+        <Button id="Button03" taborder="6" text="시작" left="14.06%" top="712" right="70.7%" height="77" style="background:white;border:1 solid black ;color:blue;font:bold 20 Dotum;cursor:pointer;" onclick="Button03_onclick"/>
+        <Button id="Button00" taborder="7" text="종료" left="35.16%" top="712" right="49.61%" height="77" style="background:white;border:1 solid black ;color:red;font:bold 20 Dotum;cursor:pointer;" onclick="Button00_onclick"/>
+        <Static id="aiScore" taborder="8" text="0" left="75%" top="29" right="14.84%" height="102" style="background:red;color:white;align:center middle;font:bold 48 Dotum;" onclick="aiScore_onclick"/>
+        <Grid id="Grid00" taborder="9" left="50.49%" top="216" right="3.61%" height="283" binddataset="Score" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row band="body" size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell col="0" disptype="normal" text="Me"/>
+                <Cell col="1" disptype="normal" text="Ai"/>
+                <Cell col="2" disptype="normal" text="Win"/>
+              </Band>
+              <Band id="body">
+                <Cell col="0" disptype="normal" text="bind:Me"/>
+                <Cell col="1" disptype="normal" text="bind:Ai"/>
+                <Cell col="2" disptype="normal" text="bind:Win"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static05" taborder="10" text="전적" left="50.49%" top="152" right="3.61%" height="53" style="background:black;color:white;align:center middle;font:bold 30 Dotum;"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Score">
+        <ColumnInfo>
+          <Column id="Me" type="STRING" size="256"/>
+          <Column id="Ai" type="STRING" size="256"/>
+          <Column id="Win" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Me">4</Col>
+            <Col id="Ai">3</Col>
+            <Col id="Win">o</Col>
+          </Row>
+          <Row>
+            <Col id="Win">x</Col>
+            <Col id="Me">1</Col>
+            <Col id="Ai">2</Col>
+          </Row>
+          <Row>
+            <Col id="Win">x</Col>
+            <Col id="Me">4</Col>
+            <Col id="Ai">7</Col>
+          </Row>
+          <Row>
+            <Col id="Win">o</Col>
+            <Col id="Me">3</Col>
+            <Col id="Ai">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.0"><![CDATA[// 가위
+this.Div00_Button00_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	this.myRSP.set_text("✌");
+}
+
+// 바위
+this.Div00_Button01_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	this.myRSP.set_text("✊");
+}
+
+// 보
+this.Div00_Button02_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	this.myRSP.set_text("✋");
+}
+
+// 컴퓨터의 가위바위보 이미지 보여주기
+this.handleAiText = function(aiText) {
+	
+	if(aiText == 0) {
+		this.aiRSP.set_text("✌");
+		return
+	}
+	else if(aiText == 1) {
+		this.aiRSP.set_text("✊");
+		return
+	}
+	else {
+		this.aiRSP.set_text("✋");
+		return
+	}
+}
+
+// 시작
+this.Button03_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{	
+	// 초기 점수
+	var aiScoreText = this.aiScore.text;
+	var myScoreText = this.myScore.text;
+	var aiText = Math.floor(Math.random() * 3);
+	
+	// Ai텍스트 설정
+	this.handleAiText(aiText);
+	
+	// 가위바위보 시작
+	
+	my = this.myRSP.text;
+	ai = this.aiRSP.text;
+	
+	
+	// 아무것도 안냈을 때 예외처리
+	if(my == "?") {
+		alert("뭘 낼지 고르세요")
+		return
+	}
+	
+	// 가위바위보 로직
+	if(my == "✌" && ai == "✌") {
+		alert("비겼습니다 ㅇㅅㅇ");
+		return
+	}
+	else if(my == "✌" && ai == "✊"){
+		alert("졌습니다 ㅠㅠ")
+		this.aiScore.set_text(Number(aiScoreText)+1);
+		return
+	}
+	else if(my == "✌" && ai == "✋") {
+		alert("이겼습니다 ^^")
+		this.myScore.set_text(Number(myScoreText)+1);
+		return
+	}
+	else if(my == "✊" && ai == "✌") {
+		alert("이겼습니다 ^^")
+		this.myScore.set_text(Number(myScoreText)+1);
+		return
+	}
+	else if(my == "✊" && ai == "✊") {
+		alert("비겼습니다 ㅇㅅㅇ")
+		return
+	}
+	else if(my == "✊" && ai == "✋") {
+		alert("졌습니다 ㅠㅠ")
+		this.aiScore.set_text(Number(aiScoreText)+1);
+		return
+	}
+	else if(my == "✋" && ai == "✌") {
+		alert("졌습니다 ㅠㅠ")
+		this.aiScore.set_text(Number(aiScoreText)+1);
+		return
+	}
+	else if(my == "✋" && ai == "✊") {
+		alert("이겼습니다 ^^")
+		this.myScore.set_text(Number(myScoreText)+1);
+		return
+	}
+	else if(my == "✋" && ai == "✋") {
+		alert("비겼습니다 ㅇㅅㅇ")
+		return
+	}
+
+}
+
+// 종료시 기록 저장
+
+this.Button00_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	var myResult = this.myScore.text
+	var aiResult = this.aiScore.text
+	var row= this.Score.addRow();
+	this.Score.setColumn(row, "Me", myResult);
+	this.Score.setColumn(row, "Ai", aiResult);
+	if(myResult > aiResult) {
+		this.Score.setColumn(row, "Win", "o");
+	}
+	else if(myResult < aiResult) {
+		this.Score.setColumn(row, "Win", "x");
+	}
+	else {
+		this.Score.setColumn(row, "Win", "=");
+	}
+	
+	// 끝나면 0점으로 되돌리기
+	this.myScore.set_text(0);
+	this.aiScore.set_text(0);
+}
+	
+]]></Script>
+  </Form>
+</FDL>

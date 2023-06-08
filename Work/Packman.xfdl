@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="Advencher" left="0" top="0" width="1024" height="783" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Div id="Div00" taborder="0" left="9.67%" top="12" right="51.56%" height="300" style="background:darkslateblue;color:black;">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="*" left="11.84%" top="86" height="30" onclick="Div00_Static00_onclick" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;" width="30"/>
+              <Static id="Static01" taborder="1" text="*" onclick="Div00_Static00_onclick" left="29.22%" top="86" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static02" taborder="2" text="*" onclick="Div00_Static00_onclick" left="46.6%" top="86" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static03" taborder="3" text="*" onclick="Div00_Static00_onclick" left="63.98%" top="86" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static04" taborder="4" text="*" onclick="Div00_Static00_onclick" left="81.36%" top="86" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static10" taborder="5" text="*" onclick="Div00_Static00_onclick" left="11.84%" top="166" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static11" taborder="6" text="*" onclick="Div00_Static00_onclick" left="29.22%" top="166" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static12" taborder="7" text="*" onclick="Div00_Static00_onclick" left="46.6%" top="166" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static13" taborder="8" text="*" onclick="Div00_Static00_onclick" left="63.98%" top="166" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static14" taborder="9" text="*" onclick="Div00_Static00_onclick" left="81.36%" top="166" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Grid id="Grid00" taborder="1" left="62.5%" top="16" right="12.89%" height="295" binddataset="Coordinates">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Col size="80"/>
+                <Col size="80"/>
+                <Col size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row band="body" size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell col="0" disptype="normal" text="x"/>
+                <Cell col="1" disptype="normal" text="y"/>
+                <Cell col="2" disptype="normal" text="star"/>
+              </Band>
+              <Band id="body">
+                <Cell col="0" disptype="normal" text="bind:x"/>
+                <Cell col="1" disptype="normal" text="bind:y"/>
+                <Cell col="2" disptype="normal" text="bind:star"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Div id="Div01" taborder="2" left="9.67%" top="390" right="45.41%" height="94" style="background:black;">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="위" left="42.83%" top="7" right="42.17%" height="34"/>
+              <Button id="Button01" taborder="1" text="왼" left="25%" top="49" right="60%" height="34"/>
+              <Button id="Button02" taborder="2" text="아래" left="42.83%" top="49" right="42.17%" height="34"/>
+              <Button id="Button03" taborder="3" text="오른" left="60.65%" top="49" right="24.35%" height="34" onclick="Div01_Button03_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Button id="Button00" taborder="3" text="시작" left="63.48%" top="402" right="22.75%" height="70" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="4" text="종료" left="79.69%" top="402" right="6.54%" height="70"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Coordinates">
+        <ColumnInfo>
+          <Column id="x" type="STRING" size="256"/>
+          <Column id="y" type="STRING" size="256"/>
+          <Column id="star" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="x">0</Col>
+            <Col id="y">0</Col>
+            <Col id="star">*</Col>
+          </Row>
+          <Row>
+            <Col id="x">0</Col>
+            <Col id="y">1</Col>
+            <Col id="star">*</Col>
+          </Row>
+          <Row>
+            <Col id="x">0</Col>
+            <Col id="y">2</Col>
+            <Col id="star">*</Col>
+          </Row>
+          <Row>
+            <Col id="x">0</Col>
+            <Col id="y">3</Col>
+            <Col id="star">*</Col>
+          </Row>
+          <Row>
+            <Col id="x">0</Col>
+            <Col id="y">4</Col>
+            <Col id="star">★</Col>
+          </Row>
+          <Row>
+            <Col id="x">1</Col>
+            <Col id="y">0</Col>
+            <Col id="star">♥</Col>
+          </Row>
+          <Row>
+            <Col id="x">1</Col>
+            <Col id="y">1</Col>
+            <Col id="star">*</Col>
+          </Row>
+          <Row>
+            <Col id="x">1</Col>
+            <Col id="y">2</Col>
+            <Col id="star">*</Col>
+          </Row>
+          <Row>
+            <Col id="x">1</Col>
+            <Col id="y">3</Col>
+            <Col id="star">*</Col>
+          </Row>
+          <Row>
+            <Col id="x">1</Col>
+            <Col id="y">4</Col>
+            <Col id="star">*</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind/>
+    <Script type="xscript5.0"><![CDATA[
+
+this.Button00_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	// Div안에 있는 값들을 가져옴
+	var starList = this.Div00.components;
+	
+	// 데이터 셋의 값으로 텍스트 설정
+	for(var i =0; i<starList.length; i++) {
+		starList[i].set_text(this.Coordinates.getColumn(i,"star"));
+	}
+}
+
+this.Div01_Button03_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	var xData = "";
+	var yData = "";
+	
+	// ♥ 문양의 컴포넌트를 찾고
+	var starList = this.Div00.components;
+	
+	// 그 컴포넌트의 x값과 y값을 찾음
+	for(var i =0; i<starList.length; i++) {
+		if(starList[i].text == "♥") {
+			trace("111")
+			xData = this.Coordinates.getColumn(i,"x");
+			yData = this.Coordinates.getColumn(i,"y");
+			trace(xData,yData);
+			
+			// 그 컴포넌트 데이터 셋의 텍스트를 ""로 바꾼다
+			startLis[i].set_text("");
+			trace("123");
+			}
+			
+	for(var i =0; i<starList.length; i++) {
+		// 컴포넌트의 y값 +1한 컴포넌트를 찾는다.
+		if(starList[i].getColumn(xData, "x") == xData && starList[i].getColumn(Number(yData)+1 ,"y") == yData){
+		trace("진입")
+		}
+		}
+		// 컴포넌트의 y값을 +1한 값을 ♥로 변경
+			
+			
+			
+	
+	}
+}
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="main" left="0" top="0" width="1024" height="768" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Div id="Div00" taborder="0" text="Div00" left="48" top="160" width="575" height="317" style="background:lime;">
+          <Layouts>
+            <Layout width="410" height="317">
+              <Static id="Static0" taborder="20" left="240" top="14" width="100" height="42" style="background:white;align:center middle;font:bold 16 Dotum;" text="자"/>
+              <Static id="Static2" taborder="21" left="240" top="86" width="100" height="42" style="background:white;align:center middle;font:bold 16 Dotum;" text="를"/>
+              <Static id="Static1" taborder="22" left="40" top="86" width="100" height="42" style="background:white;align:center middle;font:bold 16 Dotum;" onclick="Div00_Static02_onclick" text="리"/>
+              <Static id="Static3" taborder="23" left="440" top="86" width="100" height="42" style="background:white;align:center middle;font:bold 16 Dotum;" text="바"/>
+              <Static id="Static4" taborder="24" left="40" top="158" width="100" height="42" style="background:white;align:center middle;font:bold 16 Dotum;" text="꿔"/>
+              <Static id="Static5" taborder="25" left="240" top="158" width="100" height="42" style="background:white;align:center middle;font:bold 16 Dotum;" text="보"/>
+              <Static id="Static6" taborder="26" left="440" top="158" width="100" height="42" style="background:white;align:center middle;font:bold 16 Dotum;" text="아"/>
+              <Static id="Static7" taborder="27" left="40" top="230" width="100" height="42" style="background:white;align:center middle;font:bold 16 Dotum;" text="요"/>
+              <Static id="Static8" taborder="28" left="240" top="230" width="100" height="42" style="background:white;align:center middle;font:bold 16 Dotum;" text="ㅎ"/>
+              <Static id="Static9" taborder="29" left="440" top="230" width="100" height="42" style="background:white;align:center middle;font:bold 16 Dotum;" text="ㅎ"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Grid id="Grid00" taborder="1" left="692" top="169" width="260" height="311" binddataset="myData" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="40"/>
+              </Columns>
+              <Rows>
+                <Row size="24"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:name"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Div id="Div01" taborder="2" text="Div01" left="56" top="538" width="911" height="148">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="시작" left="345" top="41" width="221" height="77" onclick="Div01_Button00_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div02" taborder="3" text="랜덤 자리 바꾸기~!" left="48" top="14" width="903" height="125" style="background:black;color:white;font:bold 30 Dotum;"/>
+      </Layout>
+    </Layouts>
+    <Style url="MyCSS::mycss.css"/>
+    <Objects>
+      <Dataset id="myData">
+        <ColumnInfo>
+          <Column id="num" type="STRING" size="256"/>
+          <Column id="name" type="STRING" size="256"/>
+          <Column id="age" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="num">1</Col>
+            <Col id="name">김경배</Col>
+            <Col id="age">52</Col>
+          </Row>
+          <Row>
+            <Col id="num">2</Col>
+            <Col id="name">이병건</Col>
+            <Col id="age">32</Col>
+          </Row>
+          <Row>
+            <Col id="num">3</Col>
+            <Col id="name">이동근</Col>
+            <Col id="age">42</Col>
+          </Row>
+          <Row>
+            <Col id="num">4</Col>
+            <Col id="name">현대</Col>
+            <Col id="age">22</Col>
+          </Row>
+          <Row>
+            <Col id="num">5</Col>
+            <Col id="name">자동차</Col>
+            <Col id="age">11</Col>
+          </Row>
+          <Row>
+            <Col id="num">6</Col>
+            <Col id="name">따릉이</Col>
+            <Col id="age">42</Col>
+          </Row>
+          <Row>
+            <Col id="num">7</Col>
+            <Col id="name">부릉이</Col>
+            <Col id="age">32</Col>
+          </Row>
+          <Row>
+            <Col id="num">8</Col>
+            <Col id="name">넥사</Col>
+            <Col id="age">65</Col>
+          </Row>
+          <Row>
+            <Col id="num">9</Col>
+            <Col id="name">크로</Col>
+            <Col id="age">12</Col>
+          </Row>
+          <Row>
+            <Col id="num">10</Col>
+            <Col id="name">리액트</Col>
+            <Col id="age">42</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind/>
+    <Script type="xscript5.0"><![CDATA[
+	
+this.Div01_Button00_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
+{
+	var rowLength = this.myData.getRowCount();
+	
+	// 배열 생성
+	var rowList = [];
+	
+	// 배열에 컬럼값 넣음
+	for(var i=0; i<rowLength; i++){
+	rowList.push(this.myData.getColumn(i,"name"));
+	}
+	
+	var j = 0;
+	
+	// 배열 길이 0 되면 while문 종료
+	while(rowList.length > 0){
+	
+	// 랜덤값 생성
+	var randomNumber = Math.floor(Math.random()*rowList.length);
+		
+	// 배열의 랜덤 인덱스의 값을 가져오고 컬럼으로 설정
+	this.myData.setColumn(j,"name",rowList[randomNumber]);
+				
+	// 배열의 랜덤 인덱스번째를 하나 없앰
+	rowList.splice(randomNumber,1);
+	j++;
+	}
+	
+	// Div 안에 있는 컴포넌트들 전부 가져와서 배열로 만듦
+	var staticList = this.Div00.components;
+	trace(this.Div00.components);
+	
+	// Static 텍스트 설정
+	for (var j=0; j<staticList.length; j++) {
+		staticList[j].set_text(this.myData.getColumn(j,"name"));
+	}
+}
+]]></Script>
+  </Form>
+</FDL>
