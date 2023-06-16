@@ -4,19 +4,34 @@
   <Form id="Advencher" left="0" top="0" width="1024" height="783" titletext="New Form">
     <Layouts>
       <Layout>
-        <Div id="Div00" taborder="0" left="9.67%" top="12" right="51.56%" height="300" style="background:darkslateblue;color:black;">
+        <Div id="Div00" taborder="0" left="13.09%" top="12" right="48.14%" height="412" style="background:darkslateblue;color:black;">
           <Layouts>
             <Layout>
-              <Static id="Static00" taborder="0" text="*" left="11.84%" top="86" height="30" onclick="Div00_Static00_onclick" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;" width="30"/>
-              <Static id="Static01" taborder="1" text="*" onclick="Div00_Static00_onclick" left="29.22%" top="86" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
-              <Static id="Static02" taborder="2" text="*" onclick="Div00_Static00_onclick" left="46.6%" top="86" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
-              <Static id="Static03" taborder="3" text="*" onclick="Div00_Static00_onclick" left="63.98%" top="86" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
-              <Static id="Static04" taborder="4" text="*" onclick="Div00_Static00_onclick" left="81.36%" top="86" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
-              <Static id="Static10" taborder="5" text="*" onclick="Div00_Static00_onclick" left="11.84%" top="166" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
-              <Static id="Static11" taborder="6" text="*" onclick="Div00_Static00_onclick" left="29.22%" top="166" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
-              <Static id="Static12" taborder="7" text="*" onclick="Div00_Static00_onclick" left="46.6%" top="166" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
-              <Static id="Static13" taborder="8" text="*" onclick="Div00_Static00_onclick" left="63.98%" top="166" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
-              <Static id="Static14" taborder="9" text="*" onclick="Div00_Static00_onclick" left="81.36%" top="166" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static0" taborder="0" text="*" left="11.08%" top="30" height="30" onclick="Div00_Static00_onclick" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;" width="30"/>
+              <Static id="Static1" taborder="1" text="*" onclick="Div00_Static00_onclick" left="28.46%" top="30" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static2" taborder="2" text="*" onclick="Div00_Static00_onclick" left="45.84%" top="30" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static3" taborder="3" text="*" onclick="Div00_Static00_onclick" left="63.22%" top="30" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static4" taborder="4" text="*" onclick="Div00_Static00_onclick" left="80.6%" top="30" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static5" taborder="5" text="*" onclick="Div00_Static00_onclick" left="11.08%" top="108" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static6" taborder="6" text="*" onclick="Div00_Static00_onclick" left="28.46%" top="108" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static7" taborder="7" text="*" onclick="Div00_Static00_onclick" left="45.84%" top="108" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static8" taborder="8" text="*" onclick="Div00_Static00_onclick" left="63.22%" top="108" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static9" taborder="9" text="*" onclick="Div00_Static00_onclick" left="80.6%" top="108" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static10" taborder="10" text="*" onclick="Div00_Static00_onclick" left="11.08%" top="186" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static11" taborder="11" text="*" onclick="Div00_Static00_onclick" left="28.46%" top="186" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static12" taborder="12" text="*" onclick="Div00_Static00_onclick" left="45.84%" top="186" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static13" taborder="13" text="*" onclick="Div00_Static00_onclick" left="63.22%" top="186" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static14" taborder="14" text="*" onclick="Div00_Static00_onclick" left="80.6%" top="186" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static15" taborder="15" text="*" onclick="Div00_Static00_onclick" left="11.08%" top="264" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static16" taborder="16" text="*" onclick="Div00_Static00_onclick" left="28.46%" top="264" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static17" taborder="17" text="*" onclick="Div00_Static00_onclick" left="45.84%" top="264" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static18" taborder="18" text="*" onclick="Div00_Static00_onclick" left="63.22%" top="264" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static19" taborder="19" text="*" onclick="Div00_Static00_onclick" left="80.6%" top="264" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static20" taborder="20" text="*" onclick="Div00_Static00_onclick" left="11.08%" top="342" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static21" taborder="21" text="*" onclick="Div00_Static00_onclick" left="28.46%" top="342" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static22" taborder="22" text="*" onclick="Div00_Static00_onclick" left="45.84%" top="342" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static23" taborder="23" text="*" onclick="Div00_Static00_onclick" left="63.22%" top="342" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
+              <Static id="Static24" taborder="24" text="*" onclick="Div00_Static00_onclick" left="80.6%" top="342" width="30" height="30" style="border:1 none #808080ff ;color:yellow;align:center middle;font:20 Dotum;"/>
             </Layout>
           </Layouts>
         </Div>
@@ -24,6 +39,7 @@
           <Formats>
             <Format id="default">
               <Columns>
+                <Col size="80"/>
                 <Col size="80"/>
                 <Col size="80"/>
                 <Col size="80"/>
@@ -35,28 +51,30 @@
               <Band id="head">
                 <Cell col="0" disptype="normal" text="x"/>
                 <Cell col="1" disptype="normal" text="y"/>
-                <Cell col="2" disptype="normal" text="star"/>
+                <Cell col="2" disptype="normal" text="num"/>
+                <Cell col="3" disptype="normal" text="star"/>
               </Band>
               <Band id="body">
                 <Cell col="0" disptype="normal" text="bind:x"/>
                 <Cell col="1" disptype="normal" text="bind:y"/>
-                <Cell col="2" disptype="normal" text="bind:star"/>
+                <Cell col="2" disptype="normal" text="bind:num"/>
+                <Cell col="3" disptype="normal" text="bind:star"/>
               </Band>
             </Format>
           </Formats>
         </Grid>
-        <Div id="Div01" taborder="2" left="9.67%" top="390" right="45.41%" height="94" style="background:black;">
+        <Div id="Div01" taborder="2" left="9.67%" top="445" right="45.41%" height="94" style="background:black;">
           <Layouts>
             <Layout>
-              <Button id="Button00" taborder="0" text="위" left="42.83%" top="7" right="42.17%" height="34"/>
-              <Button id="Button01" taborder="1" text="왼" left="25%" top="49" right="60%" height="34"/>
-              <Button id="Button02" taborder="2" text="아래" left="42.83%" top="49" right="42.17%" height="34"/>
-              <Button id="Button03" taborder="3" text="오른" left="60.65%" top="49" right="24.35%" height="34" onclick="Div01_Button03_onclick"/>
+              <Button id="Button00" taborder="0" text="위" left="42.83%" top="7" right="42.17%" height="34" onclick="Div01_Button00_onclick"/>
+              <Button id="Button01" taborder="1" text="왼" left="25%" top="49" right="60%" height="34" onclick="Div01_Button01_onclick"/>
+              <Button id="Button02" taborder="2" text="아래" left="42.83%" top="49" right="42.17%" height="34" onclick="Div01_Button02_onclick"/>
+              <Button id="Button03" taborder="3" text="오른" left="60.65%" top="49" right="24.35%" height="34" onclick="Div01_Button03_onclick" onkeydown="Div01_Button03_onkeydown"/>
             </Layout>
           </Layouts>
         </Div>
-        <Button id="Button00" taborder="3" text="시작" left="63.48%" top="402" right="22.75%" height="70" onclick="Button00_onclick"/>
-        <Button id="Button01" taborder="4" text="종료" left="79.69%" top="402" right="6.54%" height="70"/>
+        <Button id="Button00" taborder="3" text="시작" left="63.48%" top="457" right="22.75%" height="70" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="4" text="종료" left="79.69%" top="457" right="6.54%" height="70" onclick="Button01_onclick"/>
       </Layout>
     </Layouts>
     <Objects>
@@ -64,6 +82,7 @@
         <ColumnInfo>
           <Column id="x" type="STRING" size="256"/>
           <Column id="y" type="STRING" size="256"/>
+          <Column id="num" type="STRING" size="256"/>
           <Column id="star" type="STRING" size="256"/>
         </ColumnInfo>
         <Rows>
@@ -71,103 +90,394 @@
             <Col id="x">0</Col>
             <Col id="y">0</Col>
             <Col id="star">*</Col>
+            <Col id="num">0</Col>
           </Row>
           <Row>
             <Col id="x">0</Col>
             <Col id="y">1</Col>
             <Col id="star">*</Col>
+            <Col id="num">1</Col>
           </Row>
           <Row>
             <Col id="x">0</Col>
             <Col id="y">2</Col>
             <Col id="star">*</Col>
+            <Col id="num">2</Col>
           </Row>
           <Row>
             <Col id="x">0</Col>
             <Col id="y">3</Col>
             <Col id="star">*</Col>
+            <Col id="num">3</Col>
           </Row>
           <Row>
             <Col id="x">0</Col>
             <Col id="y">4</Col>
             <Col id="star">★</Col>
+            <Col id="num">4</Col>
           </Row>
           <Row>
             <Col id="x">1</Col>
             <Col id="y">0</Col>
-            <Col id="star">♥</Col>
+            <Col id="star">*</Col>
+            <Col id="num">5</Col>
           </Row>
           <Row>
             <Col id="x">1</Col>
             <Col id="y">1</Col>
             <Col id="star">*</Col>
+            <Col id="num">6</Col>
           </Row>
           <Row>
             <Col id="x">1</Col>
             <Col id="y">2</Col>
             <Col id="star">*</Col>
+            <Col id="num">7</Col>
           </Row>
           <Row>
             <Col id="x">1</Col>
             <Col id="y">3</Col>
             <Col id="star">*</Col>
+            <Col id="num">8</Col>
           </Row>
           <Row>
             <Col id="x">1</Col>
             <Col id="y">4</Col>
             <Col id="star">*</Col>
+            <Col id="num">9</Col>
+          </Row>
+          <Row>
+            <Col id="x">2</Col>
+            <Col id="y">0</Col>
+            <Col id="star">*</Col>
+            <Col id="num">10</Col>
+          </Row>
+          <Row>
+            <Col id="x">2</Col>
+            <Col id="y">1</Col>
+            <Col id="star">*</Col>
+            <Col id="num">11</Col>
+          </Row>
+          <Row>
+            <Col id="x">2</Col>
+            <Col id="y">2</Col>
+            <Col id="star">*</Col>
+            <Col id="num">12</Col>
+          </Row>
+          <Row>
+            <Col id="x">2</Col>
+            <Col id="y">3</Col>
+            <Col id="star">*</Col>
+            <Col id="num">13</Col>
+          </Row>
+          <Row>
+            <Col id="x">2</Col>
+            <Col id="y">4</Col>
+            <Col id="star">*</Col>
+            <Col id="num">14</Col>
+          </Row>
+          <Row>
+            <Col id="x">3</Col>
+            <Col id="y">0</Col>
+            <Col id="star">*</Col>
+            <Col id="num">15</Col>
+          </Row>
+          <Row>
+            <Col id="x">3</Col>
+            <Col id="y">1</Col>
+            <Col id="star">*</Col>
+            <Col id="num">16</Col>
+          </Row>
+          <Row>
+            <Col id="x">3</Col>
+            <Col id="y">2</Col>
+            <Col id="star">*</Col>
+            <Col id="num">17</Col>
+          </Row>
+          <Row>
+            <Col id="x">3</Col>
+            <Col id="y">3</Col>
+            <Col id="star">*</Col>
+            <Col id="num">18</Col>
+          </Row>
+          <Row>
+            <Col id="x">3</Col>
+            <Col id="y">4</Col>
+            <Col id="star">*</Col>
+            <Col id="num">19</Col>
+          </Row>
+          <Row>
+            <Col id="x">4</Col>
+            <Col id="y">0</Col>
+            <Col id="star">♥</Col>
+            <Col id="num">20</Col>
+          </Row>
+          <Row>
+            <Col id="x">4</Col>
+            <Col id="y">1</Col>
+            <Col id="star">*</Col>
+            <Col id="num">21</Col>
+          </Row>
+          <Row>
+            <Col id="x">4</Col>
+            <Col id="y">2</Col>
+            <Col id="star">*</Col>
+            <Col id="num">22</Col>
+          </Row>
+          <Row>
+            <Col id="x">4</Col>
+            <Col id="y">3</Col>
+            <Col id="star">*</Col>
+            <Col id="num">23</Col>
+          </Row>
+          <Row>
+            <Col id="x">4</Col>
+            <Col id="y">4</Col>
+            <Col id="star">*</Col>
+            <Col id="num">24</Col>
           </Row>
         </Rows>
       </Dataset>
     </Objects>
     <Bind/>
-    <Script type="xscript5.0"><![CDATA[
+    <Script type="xscript5.0"><![CDATA[this.Button00_onclick = function (obj: Button, e: nexacro.ClickEventInfo) {
+  // Div안에 있는 값들을 가져옴
+  var starList = this.Div00.components;
 
-this.Button00_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
-{
-	// Div안에 있는 값들을 가져옴
-	var starList = this.Div00.components;
-	
-	// 데이터 셋의 값으로 텍스트 설정
-	for(var i =0; i<starList.length; i++) {
-		starList[i].set_text(this.Coordinates.getColumn(i,"star"));
-	}
-}
+  // 데이터 셋의 값으로 텍스트 설정
+  for (var i = 0; i < starList.length; i++) {
+    starList[i].set_text(this.Coordinates.getColumn(i, "star"));
+  }
+};
 
-this.Div01_Button03_onclick = function(obj:Button, e:nexacro.ClickEventInfo)
-{
-	var xData = "";
-	var yData = "";
-	
-	// ♥ 문양의 컴포넌트를 찾고
-	var starList = this.Div00.components;
-	
-	// 그 컴포넌트의 x값과 y값을 찾음
-	for(var i =0; i<starList.length; i++) {
-		if(starList[i].text == "♥") {
-			trace("111")
-			xData = this.Coordinates.getColumn(i,"x");
-			yData = this.Coordinates.getColumn(i,"y");
-			trace(xData,yData);
-			
-			// 그 컴포넌트 데이터 셋의 텍스트를 ""로 바꾼다
-			startLis[i].set_text("");
-			trace("123");
-			}
-			
-	for(var i =0; i<starList.length; i++) {
-		// 컴포넌트의 y값 +1한 컴포넌트를 찾는다.
-		if(starList[i].getColumn(xData, "x") == xData && starList[i].getColumn(Number(yData)+1 ,"y") == yData){
-		trace("진입")
-		}
-		}
-		// 컴포넌트의 y값을 +1한 값을 ♥로 변경
-			
-			
-			
-	
-	}
-}
+////////////////////
+
+// 위로 이동 함수
+this.handleUp = function (starList, mark) {
+  var xData = 0;
+  var yData = 0;
+  var toggle = true;
+
+  // 그 컴포넌트의 x값과 y값을 찾음
+  for (var i = 0; i < starList.length; i++) {
+    if (starList[i].text == mark) {
+      xData = parseInt(this.Coordinates.getColumn(i, "x"));
+      yData = parseInt(this.Coordinates.getColumn(i, "y"));
+      toggle = false;
+
+      // 마지막 칸 일때는 실행하지 않는 예외처리
+      if (xData - 1 < 0) {
+        return;
+      }
+
+      numData = parseInt(this.Coordinates.getColumn(i, "num"));
+
+      // 그 컴포넌트 데이터 셋의 텍스트를 ""로 바꾼다
+      this.Coordinates.setColumn(i, "star", "");
+
+      // 바꾼 데이터셋으로 화면 값 변경
+      starList[i].set_text(this.Coordinates.getColumn(i, "star"));
+    }
+  }
+
+  // 하트를 찾지 못한다면 실행 x
+  if (toggle) {
+    return;
+  }
+
+  // 자신의 위치 기준으로 오른쪽 + 1칸 즉 y값 + 1
+
+  for (var i = 0; i < starList.length; i++) {
+    if (
+      this.Coordinates.getColumn(i, "x") == xData - 1 &&
+      this.Coordinates.getColumn(i, "y") == yData
+    ) {
+      // 그 컴포넌트 데이터 셋의 텍스트를 ♥로 바꾼다
+      this.Coordinates.setColumn(i, "star", mark);
+
+      // 바꾼 데이터셋으로 화면 값 변경
+      starList[i].set_text(this.Coordinates.getColumn(i, "star"));
+    }
+  }
+};
+
+// 아래 이동 함수
+this.handleDown = function (mark) {
+  var xData = 0;
+  var yData = 0;
+  var toggle = true;
+
+  // ♥ 문양의 컴포넌트를 찾고
+  var starList = this.Div00.components;
+  // 그 컴포넌트의 x값과 y값을 찾음
+  for (var i = 0; i < starList.length; i++) {
+    if (starList[i].text == "♥") {
+      xData = parseInt(this.Coordinates.getColumn(i, "x"));
+      yData = parseInt(this.Coordinates.getColumn(i, "y"));
+      toggle = false;
+
+      // 마지막 칸 일때는 실행하지 않는 예외처리
+      if (xData + 1 > 4) {
+        return;
+      }
+
+      numData = parseInt(this.Coordinates.getColumn(i, "num"));
+
+      // 그 컴포넌트 데이터 셋의 텍스트를 ""로 바꾼다
+      this.Coordinates.setColumn(i, "star", "");
+
+      // 바꾼 데이터셋으로 화면 값 변경
+      starList[i].set_text(this.Coordinates.getColumn(i, "star"));
+    }
+  }
+
+  // 하트를 찾지 못한다면 실행 x
+  if (toggle) {
+    return;
+  }
+
+  // 자신의 위치 기준으로 오른쪽 + 1칸 즉 y값 + 1
+  for (var i = 0; i < starList.length; i++) {
+    if (
+      this.Coordinates.getColumn(i, "x") == xData + 1 &&
+      this.Coordinates.getColumn(i, "y") == yData
+    ) {
+      // 그 컴포넌트 데이터 셋의 텍스트를 ♥로 바꾼다
+      this.Coordinates.setColumn(i, "star", "♥");
+
+      // 바꾼 데이터셋으로 화면 값 변경
+      starList[i].set_text(this.Coordinates.getColumn(i, "star"));
+    }
+  }
+};
+
+// 왼쪽 이동 함수
+this.handleLeft = function (mark) {
+  var xData = 0;
+  var yData = 0;
+  var toggle = true;
+
+  // ♥ 문양의 컴포넌트를 찾고
+  var starList = this.Div00.components;
+  // 그 컴포넌트의 x값과 y값을 찾음
+  for (var i = 0; i < starList.length; i++) {
+    if (starList[i].text == "♥") {
+      xData = parseInt(this.Coordinates.getColumn(i, "x"));
+      yData = parseInt(this.Coordinates.getColumn(i, "y"));
+      toggle = false;
+
+      // 마지막 칸 일때는 실행하지 않는 예외처리
+      if (yData - 1 < 0) {
+        return;
+      }
+
+      numData = parseInt(this.Coordinates.getColumn(i, "num"));
+
+      // 그 컴포넌트 데이터 셋의 텍스트를 ""로 바꾼다
+      this.Coordinates.setColumn(i, "star", "");
+
+      // 바꾼 데이터셋으로 화면 값 변경
+      starList[i].set_text(this.Coordinates.getColumn(i, "star"));
+    }
+  }
+
+  // 하트를 찾지 못한다면 실행 x
+  if (toggle) {
+    return;
+  }
+
+  // 자신의 위치 기준으로 왼쪽 - 1칸 즉 y값 - 1
+  for (var i = 0; i < starList.length; i++) {
+    if (
+      this.Coordinates.getColumn(i, "x") == xData &&
+      this.Coordinates.getColumn(i, "y") == yData - 1
+    ) {
+      // 그 컴포넌트 데이터 셋의 텍스트를 ♥로 바꾼다
+      this.Coordinates.setColumn(i, "star", "♥");
+
+      // 바꾼 데이터셋으로 화면 값 변경
+      starList[i].set_text(this.Coordinates.getColumn(i, "star"));
+    }
+  }
+};
+
+// 오른쪽 이동 함수
+this.handleRight = function (mark) {
+  var xData = 0;
+  var yData = 0;
+  var toggle = true;
+
+  // ♥ 문양의 컴포넌트를 찾고
+  var starList = this.Div00.components;
+  // 그 컴포넌트의 x값과 y값을 찾음
+  for (var i = 0; i < starList.length; i++) {
+    if (starList[i].text == "♥") {
+      xData = parseInt(this.Coordinates.getColumn(i, "x"));
+      yData = parseInt(this.Coordinates.getColumn(i, "y"));
+      toggle = false;
+
+      // 마지막 칸 일때는 실행하지 않는 예외처리
+      if (yData + 1 > 4) {
+        return;
+      }
+
+      numData = parseInt(this.Coordinates.getColumn(i, "num"));
+
+      // 그 컴포넌트 데이터 셋의 텍스트를 ""로 바꾼다
+      this.Coordinates.setColumn(i, "star", "");
+
+      // 바꾼 데이터셋으로 화면 값 변경
+      starList[i].set_text(this.Coordinates.getColumn(i, "star"));
+    }
+  }
+
+  // 하트를 찾지 못한다면 실행 x
+  if (toggle) {
+    return;
+  }
+
+  // 자신의 위치 기준으로 오른쪽 + 1칸 즉 y값 + 1
+  for (var i = 0; i < starList.length; i++) {
+    if (
+      this.Coordinates.getColumn(i, "x") == xData &&
+      this.Coordinates.getColumn(i, "y") == yData + 1
+    ) {
+      // 그 컴포넌트 데이터 셋의 텍스트를 ♥로 바꾼다
+      this.Coordinates.setColumn(i, "star", "♥");
+
+      // 바꾼 데이터셋으로 화면 값 변경
+      starList[i].set_text(this.Coordinates.getColumn(i, "star"));
+    }
+  }
+};
+
+// 위
+this.Div01_Button00_onclick = function (
+  obj: Button,
+  e: nexacro.ClickEventInfo) {
+  // ♥ 문양의 컴포넌트를 찾고
+  var starList = this.Div00.components;
+  var mark = "♥";
+  // 위로 이동 함수 실행
+  this.handleUp(starList, mark);
+  // ai의 랜덤값 생성
+  var randomNumber = Math.floor(Math.random() * 4);
+  trace(randomNumber);
+};
+
+// 아래
+this.Div01_Button02_onclick = function (
+  obj: Button,
+  e: nexacro.ClickEventInfo) {};
+// 왼쪽
+this.Div01_Button01_onclick = function (
+  obj: Button,
+  e: nexacro.ClickEventInfo) {};
+
+// 오른쪽
+this.Div01_Button03_onclick = function (
+  obj: Button,
+  e: nexacro.ClickEventInfo) {};
 ]]></Script>
   </Form>
 </FDL>
