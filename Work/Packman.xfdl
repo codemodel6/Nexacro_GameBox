@@ -243,14 +243,16 @@
     <Script type="xscript5.0"><![CDATA[this.Button00_onclick = function (obj: Button, e: nexacro.ClickEventInfo) {
   // Div안에 있는 값들을 가져옴
   var starList = this.Div00.components;
-
+  
+  // 캐릭터 설정
+  this.Coordinates.setColumn(4, "star", "★");
+  this.Coordinates.setColumn(20, "star", "♥");
+  
   // 데이터 셋의 값으로 텍스트 설정
   for (var i = 0; i < starList.length; i++) {
     starList[i].set_text(this.Coordinates.getColumn(i, "star"));
   }
 };
-
-////////////////////
 
 // 위로 이동 함수
 this.handleUp = function (starList, mark) {
@@ -302,16 +304,14 @@ this.handleUp = function (starList, mark) {
 };
 
 // 아래 이동 함수
-this.handleDown = function (mark) {
+this.handleDown = function (starList, mark) {
   var xData = 0;
   var yData = 0;
   var toggle = true;
 
-  // ♥ 문양의 컴포넌트를 찾고
-  var starList = this.Div00.components;
   // 그 컴포넌트의 x값과 y값을 찾음
   for (var i = 0; i < starList.length; i++) {
-    if (starList[i].text == "♥") {
+    if (starList[i].text == mark) {
       xData = parseInt(this.Coordinates.getColumn(i, "x"));
       yData = parseInt(this.Coordinates.getColumn(i, "y"));
       toggle = false;
@@ -343,7 +343,7 @@ this.handleDown = function (mark) {
       this.Coordinates.getColumn(i, "y") == yData
     ) {
       // 그 컴포넌트 데이터 셋의 텍스트를 ♥로 바꾼다
-      this.Coordinates.setColumn(i, "star", "♥");
+      this.Coordinates.setColumn(i, "star", mark);
 
       // 바꾼 데이터셋으로 화면 값 변경
       starList[i].set_text(this.Coordinates.getColumn(i, "star"));
@@ -352,16 +352,14 @@ this.handleDown = function (mark) {
 };
 
 // 왼쪽 이동 함수
-this.handleLeft = function (mark) {
+this.handleLeft = function (starList, mark) {
   var xData = 0;
   var yData = 0;
   var toggle = true;
 
-  // ♥ 문양의 컴포넌트를 찾고
-  var starList = this.Div00.components;
   // 그 컴포넌트의 x값과 y값을 찾음
   for (var i = 0; i < starList.length; i++) {
-    if (starList[i].text == "♥") {
+    if (starList[i].text == mark) {
       xData = parseInt(this.Coordinates.getColumn(i, "x"));
       yData = parseInt(this.Coordinates.getColumn(i, "y"));
       toggle = false;
@@ -393,7 +391,7 @@ this.handleLeft = function (mark) {
       this.Coordinates.getColumn(i, "y") == yData - 1
     ) {
       // 그 컴포넌트 데이터 셋의 텍스트를 ♥로 바꾼다
-      this.Coordinates.setColumn(i, "star", "♥");
+      this.Coordinates.setColumn(i, "star", mark);
 
       // 바꾼 데이터셋으로 화면 값 변경
       starList[i].set_text(this.Coordinates.getColumn(i, "star"));
@@ -402,16 +400,14 @@ this.handleLeft = function (mark) {
 };
 
 // 오른쪽 이동 함수
-this.handleRight = function (mark) {
+this.handleRight = function (starList, mark) {
   var xData = 0;
   var yData = 0;
   var toggle = true;
 
-  // ♥ 문양의 컴포넌트를 찾고
-  var starList = this.Div00.components;
   // 그 컴포넌트의 x값과 y값을 찾음
   for (var i = 0; i < starList.length; i++) {
-    if (starList[i].text == "♥") {
+    if (starList[i].text == mark) {
       xData = parseInt(this.Coordinates.getColumn(i, "x"));
       yData = parseInt(this.Coordinates.getColumn(i, "y"));
       toggle = false;
@@ -443,11 +439,24 @@ this.handleRight = function (mark) {
       this.Coordinates.getColumn(i, "y") == yData + 1
     ) {
       // 그 컴포넌트 데이터 셋의 텍스트를 ♥로 바꾼다
-      this.Coordinates.setColumn(i, "star", "♥");
+      this.Coordinates.setColumn(i, "star", mark);
 
       // 바꾼 데이터셋으로 화면 값 변경
       starList[i].set_text(this.Coordinates.getColumn(i, "star"));
     }
+  }
+};
+
+// ai문의 if문
+this.aiIf = function (starList,mark,randomNumber) {
+  if (randomNumber == 0) {
+    this.handleUp(starList, mark);
+  } else if (randomNumber == 1) {
+    this.handleDown(starList, mark);
+  } else if (randomNumber == 2) {
+    this.handleLeft(starList, mark);
+  } else if (randomNumber == 3) {
+    this.handleRight(starList, mark);
   }
 };
 
@@ -460,24 +469,84 @@ this.Div01_Button00_onclick = function (
   var mark = "♥";
   // 위로 이동 함수 실행
   this.handleUp(starList, mark);
+
   // ai의 랜덤값 생성
+  mark = "★";
   var randomNumber = Math.floor(Math.random() * 4);
-  trace(randomNumber);
+
+  // 값에 따른 로직 함수 실행
+  this.aiIf(starList,mark,randomNumber);
 };
 
 // 아래
 this.Div01_Button02_onclick = function (
   obj: Button,
-  e: nexacro.ClickEventInfo) {};
+  e: nexacro.ClickEventInfo) {
+  // ♥ 문양의 컴포넌트를 찾고
+  var starList = this.Div00.components;
+  var mark = "♥";
+  // 위로 이동 함수 실행
+  this.handleDown(starList, mark);
+
+  // ai의 랜덤값 생성
+  mark = "★";
+  var randomNumber = Math.floor(Math.random() * 4);
+
+  // 값에 따른 로직 함수 실행
+  this.aiIf(starList,mark,randomNumber);
+};
 // 왼쪽
 this.Div01_Button01_onclick = function (
   obj: Button,
-  e: nexacro.ClickEventInfo) {};
+  e: nexacro.ClickEventInfo) {
+  // ♥ 문양의 컴포넌트를 찾고
+  var starList = this.Div00.components;
+  var mark = "♥";
+  // 위로 이동 함수 실행
+  this.handleLeft(starList, mark);
+
+  // ai의 랜덤값 생성
+  mark = "★";
+  var randomNumber = Math.floor(Math.random() * 4);
+
+  // 값에 따른 로직 함수 실행
+  this.aiIf(starList,mark,randomNumber);
+};
 
 // 오른쪽
 this.Div01_Button03_onclick = function (
   obj: Button,
-  e: nexacro.ClickEventInfo) {};
+  e: nexacro.ClickEventInfo) {
+  // ♥ 문양의 컴포넌트를 찾고
+  var starList = this.Div00.components;
+  var mark = "♥";
+  // 위로 이동 함수 실행
+  this.handleRight(starList, mark);
+
+  // ai의 랜덤값 생성
+  mark = "★";
+  var randomNumber = Math.floor(Math.random() * 4);
+
+  // 값에 따른 로직 함수 실행
+  this.aiIf(starList,mark,randomNumber);
+};
+
+// 종료문
+this.Button01_onclick = function (obj: Button, e: nexacro.ClickEventInfo) {
+  this.endGame();
+};
+
+this.endGame = function () {
+  // Div안에 있는 값들을 가져옴
+  var starList = this.Div00.components;
+
+  // 데이터 셋의 값을 별로 만듦
+  for (var i = 0; i < starList.length; i++) {
+    this.Coordinates.setColumn(i, "star", "*");
+    starList[i].set_text(this.Coordinates.getColumn(i, "star"));
+  }
+};
+
 ]]></Script>
   </Form>
 </FDL>
